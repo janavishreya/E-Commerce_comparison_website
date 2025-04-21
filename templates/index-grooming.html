@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>
+       
+            E-CART
+        </h1>
+    </header> 
+    <h2>Products</h2>
+    <div class="container">
+        {% for product in products %}
+            <div class="product-container">
+                <a href="{{ url_for('pro_grooming', product_name=product.pro_name, product_id=product.prod_id) }}">
+                    <img src="{{ url_for('static', filename=product.img_path) }}" alt="{{ product.pro_name }}" class="product-image">
+                    <div class="product-name"> {{ product.pro_name }} </div>  
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

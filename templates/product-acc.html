@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body> 
+    <header>
+        <h1>
+       
+            E-CART
+        </h1>
+    </header>
+    <div class="details-container">
+        <h2>{{ product_name }}</h2>
+        <table>
+            <tr>
+                <th>Website</th>
+                <th>Price</th>
+                <th>Discount</th>
+                <th>Delivery date</th>
+                <th>Replacement/Return</th>
+                <th>Rating</th>
+                <th>Warranty</th>
+                <th>Link</th>
+                <!-- Add other columns as needed -->
+            </tr>
+            {% for detail in product_details %}
+            <tr>
+                <td>{{ detail.web }}</td>
+                <td>{{ detail.price }}</td>
+                <td>{{ detail.disc }}</td>
+                <td>{{ detail.del_days }}</td>
+                <td>{{ detail.replace_return }}</td>
+                <td>{{ detail.ratings }}</td>
+                <td>{{ detail.warranty }}</td>
+                <td><a href="{{ detail.link  }}" target="_blank"> Click here</a></td>
+                <!-- Add other columns as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="footer">
+        <div class="disclaimer">DISCLAIMER!</div>
+        <div class="disclaimer"> **Data as on june 2024.For updated info check on links</div>
+    </div>
+</body>
+</html>

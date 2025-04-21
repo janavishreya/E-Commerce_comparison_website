@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>emart</title>
+    <style>
+        body{
+            background-color: rgb(32, 29, 29);
+        }
+        .searchbar
+{
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 50px;
+}
+.searchbar input[type="text"]
+{
+    width: 850px;
+    height: 50px;
+    border-style: solid;
+    border:3px solid rgb(255, 123, 0);
+    font-size: 17px;
+}
+.searchbar input[type="submit"]
+{
+    width: 55px;
+    height: 40px;
+    border-style: ridge;
+    border-color: rgb(255, 123, 0);
+}
+header
+{
+ text-align: center;
+ font-size: x-large; 
+ color:rgb(255, 123, 0);
+ position: static;
+ left:0;
+ top:0;
+ z-index: 1000;
+ width: 1700px;
+ height:auto;
+}
+.container
+{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box
+{
+    width: 30%;
+    margin:10px;
+    border: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color:rgb(32, 29, 29);
+    position: relative;
+    overflow: hidden;
+}
+.box img
+{
+    max-width: 100%;
+    height:100%;
+    transition: opacity 0.3s ease;
+}
+.box-label {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 32%;
+            height: 98%;
+            background:rgb(255, 123, 0);
+            font-size: 35px;
+            opacity:0;
+            transition: opacity 0.8s ease;
+        }
+.box:hover img{
+    transform: translateY(-5px);
+    opacity:0.4;
+}
+.box:hover .box-label{
+    opacity:1;
+}
+    </style>
+</head>
+<body >
+    <header>
+        <h1>
+       
+            E-CART
+        </h1>
+    </header> 
+    <div class="searchbar">
+        <form action="/search" method="GET">
+            <input type="text" name="s" placeholder="Search...">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <div class="container">
+        <div class="box">
+            <a href="{{  url_for('electronics') }}">
+            <img src="{{ url_for('static', filename='images/Electronics.jpeg') }}" alt="gadget">
+            </a>
+            <div class="box-label">Electronics</div>
+        </div>
+        <div class="box">
+            <a href="{{  url_for('beauty') }}">
+            <img src="{{ url_for('static', filename='images/Beauty.jpg') }}" alt="beauty">
+            </a>
+            <div class="box-label">Beauty products</div>
+        </div>
+        <div class="box">
+            <a href="{{  url_for('furniture') }}">
+            <img src="{{ url_for('static', filename='images/Furnitures.jpeg') }}" alt="furnitures">
+            </a>
+            <div class="box-label">Furnitures</div>
+        </div>
+        <div class="box">
+            <a href="{{  url_for('mobile_acc') }}">
+            <img src="{{ url_for('static', filename='images/mobile-phone-accessories.jpg') }}" alt="mobile-phone-accessories">
+            </a>
+            <div class="box-label">Mobile and accessories</div>
+        </div>
+        <div class="box">
+            <a href="{{  url_for('grocery') }}">
+            <img src="{{ url_for('static', filename='images/Groceries.jpg') }}" alt="gadget">
+            </a>
+            <div class="box-label">Groceries</div>
+        </div>
+        <div class="box">
+            <a href="{{  url_for('footwear_bags') }}">
+            <img src="{{ url_for('static', filename='images/Foot wear.jpg') }}" alt="footwear">
+            </a>
+            <div class="box-label">Footwear and bag</div>
+        </div>
+
+    </div>
+</body>
+</html>

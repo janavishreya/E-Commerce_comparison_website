@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(32,29,29);
+}
+header
+{
+ text-align: center;
+ font-size: x-large; 
+ color:rgb(255, 123, 0);
+ position:static;
+ left:0;
+ top:0;
+ z-index: 1000;
+ width: 1700px;
+ height:auto;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full height of the viewport */
+    background-color:rgb(32,29,29);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 70px; /* Add margin to move the header down */
+    color:rgb(255, 123, 0);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-container {
+    width: 80%;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.product-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-container a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allow product name to grow and take remaining space */
+}
+
+.product-image {
+    width: auto; /* Let the width adjust automatically */
+    height: 100px; /* Set a fixed height to maintain consistency */
+    object-fit: contain; /* Fit the entire image within the container */
+    border-radius: 8px;
+    margin-right: 20px; /* Add margin to the right of the image */
+}
+
+.product-name {
+    flex-grow: 1; /* Allow product name to grow and take remaining space */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Display ellipsis for overflow text */
+    margin-left: 20px; /* Add margin to separate from the image */
+}
+
+table {
+    margin: 30px auto; /* Add margin to move the table down */
+    border-collapse: collapse;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+.details-container {
+    flex: 1; /* Allow this container to take up available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.details-container table {
+    width: 100%;
+}
+
+.details-container h1 {
+    margin-bottom: 20px;
+}
+
+/* Footer disclaimer classes */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin-bottom: 120px;
+}
+
+.footer .disclaimer, .footer .disclaimer1, .footer .disclaimer2 {
+    margin-top: 15px;
+    font-weight: bold; /* Make the text bold */
+    font-size: 1.1em; /* Slightly increase the font size */
+    color:rgb(255, 123, 0);
+}
+.recommendation {
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(255, 123, 0);
+}

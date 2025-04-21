@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>emart</title>
+    <style>
+         body{
+            background-color:rgb(32,29,29);
+        }
+.electronics
+{
+    text-align:left;
+    margin-top: 50px;
+
+}
+.electronics p {
+    font-size:50px;
+    margin-bottom: 60px;
+    margin-top: 50px;
+    font-style: italic;
+    color:rgb(255, 123, 0);
+}
+header
+{
+ text-align: center;
+ font-size: x-large; 
+ background-color:rgb(32,29,29);
+ color:rgb(255, 123, 0);
+ position:static;
+ left:0;
+ top:0;
+ z-index: 1000;
+ width: 1700px;
+ height:auto;
+}
+.container
+{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box
+{
+    width: 30%;
+    margin:10px;
+    border: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(32,29,29);
+    position: relative;
+    overflow: hidden;
+}
+.box img
+{
+    max-width: 100%;
+    height:100%;
+    transition: opacity 0.3s ease;
+}
+.box-label {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: 100%;
+            background:rgb(255, 123, 0);
+            font-size: 35px;
+            opacity:0;
+            transition: opacity 0.8s ease;
+        }
+.box:hover img{
+    transform: translateY(-5px);
+    opacity:0.4;
+}
+.box:hover .box-label{
+    opacity:1;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+       
+            E-CART
+        </h1>
+    </header> 
+    <div class="electronics">
+        <p>
+            > Beauty
+        </p>
+    </div>
+    <div class="container">
+        
+        <div class="box">
+            <a href="{{  url_for('perfume') }}">
+            <img src="{{ url_for('static', filename='images/Perfumes.jpg') }}" alt="Perfumes">
+            </a>
+            <div class="box-label">Perfumes</div>
+        </div>
+        <div class="box">
+            <a href="{{  url_for('lotion') }}">
+            <img src="{{ url_for('static', filename='images/Lotions.jpg') }}" alt="Lotions">
+            </a>
+            <div class="box-label">Lotions</div>
+        </div>
+        <div class="box">
+            <a href="{{  url_for('grooming') }}">
+            <img src="{{ url_for('static', filename='images/Grooming.jpg') }}" alt="Grooming">
+            </a>
+            <div class="box-label">Grooming</div>
+        </div>
+        <div class="box">
+            <a href="{{  url_for('makeup') }}">
+            <img src="{{ url_for('static', filename='images/Perfumes.jpg') }}" alt="Perfumes">
+            </a>
+            <div class="box-label">Makeup</div>
+        </div>
+        <div class="box">
+            <a href="{{  url_for('pack') }}">
+            <img src="{{ url_for('static', filename='images/Perfumes.jpg') }}" alt="Perfumes">
+            </a>
+            <div class="box-label">Face packs</div>
+        </div>
+        <div class="box">
+            <a href="{{  url_for('acc') }}">
+            <img src="{{ url_for('static', filename='images/Perfumes.jpg') }}" alt="Perfumes">
+            </a>
+            <div class="box-label">Accessories</div>
+        </div>
+
+    </div>
+</body>
+</html>
